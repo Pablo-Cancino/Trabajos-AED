@@ -32,5 +32,5 @@ while True:
         break
 
 #se imprime el numero de escudos necesarios
-print (total_escudos)
+print(f"se necesita un total de {total_escudos} escudos")
 
