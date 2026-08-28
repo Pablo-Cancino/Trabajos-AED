@@ -1,7 +1,7 @@
 import time
 import matplotlib.pyplot as plt
 
-#Func modificada desde 3sum_problem
+#Func modificada desde 2sum
 """
 def two_sum(numbers: list[int]):
     for i in range(len(numbers)):
