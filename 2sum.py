@@ -1,3 +1,6 @@
+import time
+import matplotlib.pyplot as plt
+
 #Func modificada desde 3sum_problem
 """
 def two_sum(numbers: list[int]):
@@ -17,9 +20,7 @@ def two_sum_brute(arr):
     for i in range(len(arr)):
             for j in range(i+1,len(arr)):
                 if (arr[i] + arr[j] == 0):
-                    print (f"[{arr[i]},{arr[j]}]")
                     count+=1
-    pass
     
     return count
 
@@ -30,14 +31,20 @@ times = []
 for size in sizes:
     arr = list(range(-size//2, size//2))
     
-    # Toma el tiempo antes de comenzar
-    start_time = 0 # TODO: Reemplazar por método real
+    # Toma el tiempo antes de comenzar, se usa time.perf_counter porque es más preciso
+    start_time = time.perf_counter()
     
     two_sum_brute(arr)
     
-    # Toma el tiempo al terminar
-    end_time = 0 # TODO: Reemplazar por método real
+    # Toma el tiempo al terminar, se usa time.perf_counter porque es más preciso
+    end_time = time.perf_counter()
     
     times.append(end_time - start_time)
 
-# TODO: Escribe el código para mostrar el gráfico Lineal
+#generar grafico ??????
+plt.plot(sizes, times, color='blue', linestyle='-', marker='o')
+plt.title("Two Sum fuerza bruta")
+plt.xlabel("Tamaño del input (N)")
+plt.ylabel("Tiempo (Segundos)")
+plt.grid(True)
+plt.show()
