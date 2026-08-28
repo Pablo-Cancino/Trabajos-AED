@@ -1,7 +1,7 @@
 #se tiene una lista de numeros enteros, en donde el sistema devuelve todos los grupos de 3 que suman 0.
 #input arreglo de Z
 #entrega combinaciones que dan 0
-"""
+
 def three_sum(numbers: list[int]):
     for i in range(len(numbers)):
         for j in range(i+1,len(numbers)):
@@ -12,8 +12,9 @@ def three_sum(numbers: list[int]):
 #numbers_input = [0, -2, 4, 2, -6, -1] --> desordenado
 numbers_input = [-6, -2, -1, 0, 2, 4]
 three_sum(numbers_input)
-"""
 
+##esto no fue desarrollado por mi, de momento es para estudiar una forma más "ordenada"/"efectiva"
+"""
 def threeSum(nums: list[int]) -> list[list[int]]:
     res = []
     nums.sort()  # Step 1: Sort the array
@@ -52,3 +53,4 @@ def threeSum(nums: list[int]) -> list[list[int]]:
                 right -= 1  # Need a smaller sum
                 
     return res
+"""
