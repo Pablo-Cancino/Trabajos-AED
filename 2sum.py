@@ -18,6 +18,7 @@ def two_sum_brute(arr):
             for j in range(i+1,len(arr)):
                 if (arr[i] + arr[j] == 0):
                     print (f"[{arr[i]},{arr[j]}]")
+                    count+=1
     pass
     
     return count
