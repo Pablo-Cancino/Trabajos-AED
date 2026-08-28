@@ -1,14 +1,42 @@
-#se tiene una lista de numeros enteros, en donde el sistema devuelve todos los grupos de 2 que suman 0.
-#input arreglo de Z
-#entrega combinaciones que dan 0
-
+#Func modificada desde 3sum_problem
+"""
 def two_sum(numbers: list[int]):
     for i in range(len(numbers)):
         for j in range(i+1,len(numbers)):
             if (numbers[i] + numbers[j] == 0):
                 print (f"[{numbers[i]},{numbers[j]}]")
-                
-        
-#numbers_input = [0, -2, 4, 2, -6, -1] --> desordenado
-numbers_input = [-6, -2, -1, 0, 2, 4]
-two_sum(numbers_input)
+"""               
+    
+#En base al lab 
+import time
+import matplotlib.pyplot as plt
+
+def two_sum_brute(arr):
+    count = 0
+    #se usa la función modificada de arriba
+    for i in range(len(arr)):
+            for j in range(i+1,len(arr)):
+                if (arr[i] + arr[j] == 0):
+                    print (f"[{arr[i]},{arr[j]}]")
+    pass
+    
+    return count
+
+# Pruebas y Tiempos de Ejecución empíricos
+sizes = [100, 200, 400, 800, 1600]
+times = []
+
+for size in sizes:
+    arr = list(range(-size//2, size//2))
+    
+    # Toma el tiempo antes de comenzar
+    start_time = 0 # TODO: Reemplazar por método real
+    
+    two_sum_brute(arr)
+    
+    # Toma el tiempo al terminar
+    end_time = 0 # TODO: Reemplazar por método real
+    
+    times.append(end_time - start_time)
+
+# TODO: Escribe el código para mostrar el gráfico Lineal
